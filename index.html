@@ -20,6 +20,8 @@
             margin: 0;
             padding: 0;
             font-family: 'Nanum Gothic', sans-serif;
+            height: 100%;
+            overflow: hidden;
         }
 
         .main {
@@ -28,40 +30,109 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .main .contain {
-            background-color: #000;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+           
+            width: 100%;
             height: 100%;
-            opacity: 0.7;
+            padding: 20px;
+          
         }
 
         .main .contain .content {
             text-align: center;
-            padding-top: 230px;
             color: #fff;
         }
 
         .main .contain .content h4 {
-            font-size: 50px;
+            font-size: 30px;
             letter-spacing: 1px;
             text-transform: uppercase;
         }
 
         .main .contain .content hr {
             width: 50%;
+            margin: 10px auto;
+            border-color: #fff;
         }
 
         .main .contain .content p {
-            font-size: 20px;
+            font-size: 16px;
             letter-spacing: 0.8px;
         }
 
-        .main .contain .content input {
-            height: 50px;
-            width: 180px;
-            font-size: 25px;
-            text-transform: uppercase;
+        .main .contain .content img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+        }
+
+        .main .contain .content .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            border: none;
+            padding: 8px 40px;
+            margin-top: 20px;
+        }
+
+        .main .contain .content .btn svg {
+            fill: #fff;
+            height: 30px;
+            width: 30px;
+        }
+
+        @media (min-width: 768px) {
+            .main .contain .content h4 {
+                font-size: 40px;
+            }
+
+            .main .contain .content p {
+                font-size: 18px;
+            }
+
+            .main .contain .content .btn svg {
+                height: 40px;
+                width: 40px;
+            }
+        }
+
+        @media (max-width: 576px) {
+        
+
+            .main .contain {
+                padding: 15px;
+            }
+
+            .main .contain .content img {
+                max-width: 160px;
+            }
+
+            .main .contain .content h4 {
+                font-size: 20px;
+            }
+
+            .main .contain .content p {
+                font-size: 12px;
+            }
+
+            .main .contain .content .btn {
+                padding: 5px 20px;
+            }
+
+            .main .contain .content .btn svg {
+                height: 20px;
+                width: 20px;
+            }
         }
     </style>
 </head>
@@ -70,7 +141,7 @@
 
     <div class="wrapper">
 
-        <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: transparent;  background-color: rgba(255, 255, 255, 0.2); 
+        <nav class="navbar navbar-inverse navbar-fixed-top" style="z-index: 200; background-color: transparent;  background-color: rgba(255, 255, 255, 0.2); 
     backdrop-filter: blur(0.1px); 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); ">
             <div class="container">
@@ -102,13 +173,12 @@
         <div class="main">
             <div class="contain">
                 <div class="content">
-                    <img src="starlife.png" style="width:300px;" alt="">
+                    <img src="starlife.png" alt="StarLife Logo">
                     <hr>
                     <p>Shop our Collection</p>
                     <a href="">
-                        <button class="btn btn-primary"
-                            style="background:none; border:none;padding: 8px 40px; margin-bottom:100px;">
-                            <svg fill="#ffffff" height="40px" width="40px" version="1.1" id="Layer_1"
+                        <button class="btn btn-primary">
+                            <svg fill="#ffffff" height="30px" width="30px" version="1.1" id="Layer_1"
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                 viewBox="0 0 24 24" xml:space="preserve">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -131,7 +201,5 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
-
-
 
 </html>
